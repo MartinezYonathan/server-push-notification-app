@@ -26,11 +26,7 @@ io.on('connection',(socket)=>{
         });
 });
 
-
-
-
-
-
-server.listen(3000,()=>{
-    console.log('Server Starts')
+const PORT = process.env.PORT || 9000;
+server.listen(PORT, () => {
+    console.log("HTTP Server running at listening on port " + server.address().port);
 });
